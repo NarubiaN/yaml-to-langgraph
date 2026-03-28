@@ -17,7 +17,7 @@ You define workflows as YAML. The engine handles compilation, state management, 
 **You don't write these YAMLs by hand.** You describe what you want to your AI, and it writes the YAML for you. That's the whole point — YAML is the interface between human intent and LangGraph execution.
 
 Tell your AI:
-> "I need a content pipeline that researches a topic, drafts a post, checks for AI slop, revises it, then waits for my approval before formatting for LinkedIn."
+> "I need a pipeline that takes a topic, researches it, drafts a blog post, reviews it for quality, and waits for my approval before publishing."
 
 It produces a YAML file. You drop it in your workflows folder. You run it. Done.
 
@@ -123,7 +123,7 @@ yaml-to-langgraph/
 │   ├── schema.py         ← WorkflowState (TypedDict) + WorkflowStep (dataclass)
 │   ├── skill_loader.py   ← reads skills/{name}/SKILL.md as system prompts
 │   └── connectors.py     ← registry of callable Python functions
-├── skills/               ← your skill folders (gitignored — bring your own)
+├── skills/               ← skill folders (nodemaker + flowmaker ship included)
 ├── workflows/            ← your YAML workflows (gitignored — bring your own)
 └── data/                 ← SQLite checkpoints (gitignored)
 ```

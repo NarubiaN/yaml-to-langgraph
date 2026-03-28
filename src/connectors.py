@@ -5,9 +5,9 @@ Register any function as a named connector. Workflows reference them by name:
     steps:
       - name: search
         type: connector
-        connector: vault_search
+        connector: doc_search
         input:
-          topic: "{{input.topic}}"
+          query: "{{input.topic}}"
 """
 
 from __future__ import annotations
